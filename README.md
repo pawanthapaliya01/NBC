@@ -59,8 +59,7 @@ gfortran -O2 -o nbc_sim NBC.f90
 # Run
 ./nbc_sim
 
- ### Visualizing the Results (Python Example) matlab version is already provided in the above file Visualizing the Results (Python Example)
-
+ ### Visualizing the Results (Python Example) matlab version is already provided in the above 
 You can use Python to visualize .dat outputs:
 
 import numpy as np
@@ -81,21 +80,7 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 
-You can use Python to visualize .dat outputs:
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Load the .dat file (example: concentration vs. time)
-data = np.loadtxt('concentration.dat')  # Update filename if needed
-
-time = data[:, 0]
-concentration = data[:, 1]
-
-plt.plot(time, concentration, label='[NBC] activity')
-plt.xlabel('Time (s)')
-plt.ylabel('Concentration (mM)')
-plt.title('NBC Simulation Result')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
