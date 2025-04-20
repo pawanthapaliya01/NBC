@@ -11,3 +11,92 @@ Ischemic conditions cause an increase in the sodium concentration of astrocytes,
 
 
 ![image](https://github.com/user-attachments/assets/6123260e-bb66-4032-92f9-fdbf836ff4c5)
+
+
+
+
+
+# NBC Simulation (Sodium-Bicarbonate Cotransporter)
+
+This Fortran program simulates the activity of the Sodium-Bicarbonate Cotransporter (NBC), which plays a vital role in regulating intracellular pH and ion concentrations in glial and neuronal cells.
+
+## File
+- `NBC.f90` — Main simulation code written in Fortran 90.
+
+---
+
+## Prerequisites
+
+You can use either of the following Fortran compilers:
+
+### Option 1: Intel Fortran Compiler
+- Intel oneAPI (includes `ifort`)
+- Or Intel Parallel Studio
+
+### Option 2: GNU Fortran Compiler
+- `gfortran` (available via most package managers)
+
+---
+
+## Compilation & Execution
+
+### Using Intel Fortran (`ifort`)
+
+```bash
+# Compile
+ifort -O2 -o nbc_sim NBC.f90
+
+# Run
+./nbc_sim
+
+
+
+### Using GNU Fortran (gfortran)
+
+# Compile
+gfortran -O2 -o nbc_sim NBC.f90
+
+# Run
+./nbc_sim
+
+ ### Visualizing the Results (Python Example) matlab version is already provided in the above file Visualizing the Results (Python Example)
+
+You can use Python to visualize .dat outputs:
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the .dat file (example: concentration vs. time)
+data = np.loadtxt('concentration.dat')  # Update filename if needed
+
+time = data[:, 0]
+concentration = data[:, 1]
+
+plt.plot(time, concentration, label='[NBC] activity')
+plt.xlabel('Time (s)')
+plt.ylabel('Concentration (mM)')
+plt.title('NBC Simulation Result')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+You can use Python to visualize .dat outputs:
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the .dat file (example: concentration vs. time)
+data = np.loadtxt('concentration.dat')  # Update filename if needed
+
+time = data[:, 0]
+concentration = data[:, 1]
+
+plt.plot(time, concentration, label='[NBC] activity')
+plt.xlabel('Time (s)')
+plt.ylabel('Concentration (mM)')
+plt.title('NBC Simulation Result')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
