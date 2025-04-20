@@ -81,7 +81,3 @@ plt.tight_layout()
 plt.show()
 
 
-plt.grid(True)
-plt.legend()
-plt.tight_layout()
-plt.show()
